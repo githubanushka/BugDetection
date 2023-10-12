@@ -1,0 +1,73 @@
+Realated MySQL queries ( decription of the table ) :
+
+Following set of entities and field are supposed to be form :
+
+
+1.
+
+mysql> show tables;
++-------------------+
+| Tables_in_iitk_db |
++-------------------+
+| employee          |
+| product           |
+| product2          |
+| student           |
+| student1          |
++-------------------+
+5 rows in set (0.10 sec)
+
+
+_________________________________________________________________________________
+
+
+2.
+ 
+
+mysql> desc employee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| userName | varchar(45) | NO   | PRI | NULL    |       |
+| userPass | text        | YES  |     | NULL    |       |
+| userType | text        | YES  |     | NULL    |       |
+| fullName | text        | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.05 sec)
+
+mysql> desc product2 ;
++-----------+-------+------+-----+---------+-------+
+| Field     | Type  | Null | Key | Default | Extra |
++-----------+-------+------+-----+---------+-------+
+| pId       | int   | NO   | PRI | NULL    |       |
+| Prod_name | text  | YES  |     | NULL    |       |
+| price     | float | YES  |     | NULL    |       |
++-----------+-------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+____________________________________________________________________________________
+
+
+3.
+
+mysql> desc student;
++--------+-------------+------+-----+-------------+-------+
+| Field  | Type        | Null | Key | Default     | Extra |
++--------+-------------+------+-----+-------------+-------+
+| roll   | int         | NO   | PRI | NULL        |       |
+| name   | text        | YES  |     | NULL        |       |
+| phone  | text        | YES  |     | NULL        |       |
+| status | varchar(45) | YES  |     |  Activated  |       |
++--------+-------------+------+-----+-------------+-------+
+4 rows in set (0.00 sec)
+
+mysql> desc student1;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| roll  | int         | NO   | PRI | NULL    |       |
+| name  | varchar(45) | YES  |     | NULL    |       |
+| phone | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)

@@ -1,0 +1,186 @@
+# THIS IS THE OPENING-MAIN PAGE AFTER ENTERING BUG TRACKING SYSTEM.
+
+#__________________________________________________________________________________________________________________________#
+#__________________________________________________________________________________________________________________________#
+
+#BEGIN ------------------------------------------------------------------>>>>>>>>
+
+'''
+
+import mysql.connector
+
+def getBTSDatabase():
+    db=mysql.connector.connect(host='localhost', database='bts_iitk', port=3306, user='root', password='password')
+    return db
+'''
+#Logging in -----------------------------------------------------------------------------------------------------------------
+def LoginForUser():
+    print("****** Welcome to LOGIN Page ****** ")
+    # ----------------------------------------------------------------------------
+    print("Select User Type from the menu as provided. ")
+    # THIS IS THE LOGIN PAGE - CHOOSE USER TYPE AFTER ENTERING BUG TRACKING SYSTEM.
+    # THIS IS THE LOGIN PAGE AFTER ENTERING BUG TRACKING SYSTEM.
+    def LoginOptions():
+        print("|************|")
+        print("|    MENU    |")
+        print("|------------|")
+        print("| 1.Customer |")
+        print("| 2. Expert  |")
+        print("| 3. Admin   |")
+        print("| 4  Exit    |")
+        print("|************|")
+
+    def CustomerPage():
+        print("**************** Welcome Customer ****************** ")
+        print("___________________________________________________________________ ")
+
+        # THIS IS THE CUSTOMER PAGE AFTER ENTERING BUG TRACKING SYSTEM.
+        def CustomerPage():
+
+            print("************ MENU *************")
+            print("1.       Create Account        ")
+            print("2.       Update Account        ")
+            print("3.       Post New Bug          ")
+            print("4.       View All Bugs         ")
+            print("5. Search Bugs based on status ")
+            print("6.      View Bug Solution      ")
+            print("7.       Change Password       ")
+            print("8.           Exit              ")
+
+        while True:
+            CustomerPage()
+            choice = input("Enter your choice (1/2/3/4/5/6/7/8): ")
+
+            if choice == "1":
+                print("Let's Create !! ")
+
+            elif choice == "2":
+                print("Let's Update !! ")
+            elif choice == "3":
+                print("New Bug ?! Tell us Here :  ")
+            elif choice == "4":
+                print("View Bugs--> ")
+            elif choice == "5":
+                print("Bug Status(Solved/Unsolved) --> ")
+            elif choice == "6":
+                print("View Bug Solution --> ")
+            elif choice == "7":
+                print("Change password -->")
+            elif choice == "8":
+                print("Exiting...")
+                break
+            else:
+                print("Invalid choice. Please try again.")
+                break
+
+    def AdminPage():
+        print("****************  Welcome Admin ****************** ")
+        print("___________________________________________________________________ ")
+
+        def AdminPage():
+            print("******************** MENU ********************")
+            print("1.   Customer Services  /  Manage  Services   ")
+            print("2.   Employee Services  /  Manage Employee    ")
+            print("3.        Bug Services  /  Manage Bug         ")
+            print("4.                     Exit                   ")
+
+        def CustomerManageService():
+            print("******* Welcome to Customer Manage/Services ******** ")
+            print("____________________________________________________\n\n")
+
+        def EmployeeManageService():
+            print("******* Welcome to Employee Manage/Services ******** ")
+            print("_____________________________________________________\n\n")
+
+        def BugManageService():
+            print("******* Welcome to Bug Manage/Services ******** ")
+            print("________________________________________________\n\n")
+
+        while True:
+            AdminPage()
+            choice = input("Enter your choice (1/2/3/4): ")
+
+            if choice == "1":
+                CustomerManageService()
+            elif choice == "2":
+                EmployeeManageService()
+            elif choice == "3":
+                BugManageService()
+            elif choice == "4":
+                print("Exiting...")
+                break
+            else:
+                print("Invalid choice. Please try again.")
+
+
+    def ExpertPage():
+
+        print("****************  Welcome Expert ****************** ")
+        print("___________________________________________________________________ ")
+        def ExpertPage():
+            print("****************** MENU *****************")
+            print("1.            View Assigned Bug          ")
+            print("2. Filter Assigned Bugs based on status  ")
+            print("3.              Solve the Bug            ")
+            print("4.             Change Password           ")
+            print("5.                 Exit                  ")
+
+        while True:
+            ExpertPage()
+            choice = input("Enter your choice (1/2/3/4/5): ")
+
+            if choice == "1":
+                print("View Assigned Bug !! ")
+            elif choice == "2":
+                print("Filter Assigned Bugs based on status --> ")
+            elif choice == "3":
+                print("Solve Bug -->  ")
+            elif choice == "4":
+                print("Change password -->")
+            elif choice == "5":
+                print("Exiting...")
+                break
+            else:
+                print("Invalid choice. Please try again.")
+                break
+
+    while True:
+        LoginOptions()
+        choice = input("Enter your choice (1/2/3/4): ")
+        if choice == "1":
+            CustomerPage()
+        elif choice == "2":
+            ExpertPage()
+        elif choice == "3":
+            AdminPage()
+        elif choice == "4":
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+            break
+        
+
+
+#THIS IS THE PAGE INITIALLY TO SHOWED SO THAT USER CAN DECIDE WHAT TO DO
+def StartUpMenu():
+        print("_______________")
+        print("|_____________|")
+        print("|     MENU    |")
+        print("|-------------|")
+        print("| 1. LOGIN    |")
+        print("| 2. Exit     |")
+        print("|_____________|")
+
+
+
+while True:
+    StartUpMenu()
+    choice = input("Enter your choice (1/2): ")
+    if choice == "1":
+        LoginForUser()
+    elif choice == "2":
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
